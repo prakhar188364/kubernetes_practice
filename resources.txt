@@ -2,5 +2,47 @@ Certified Kubernetes Application Developer: https://www.cncf.io/certification/ck
 Candidate Handbook: https://www.cncf.io/certification/candidate-handbook/
 Exam Tips: https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad/
 
-
 Keep the code - 20KLOUD handy while registering for the CKA or CKAD exams at Linux Foundation to get a 20% discount.
+
+Notes- 
+Node is machine, also called as minion. 
+Cluster is a set of node, used in load balancing.
+Master node does orchestration for worked node. 
+
+Worker Node -> have continer runtime server -> Kubelet
+
+Master Node -> apiserver thst speak to workers kubelet agent.
+master also have    etcd  - Responsible to store key value pair
+                    controller - Responsible for noticing and responding when nodes go down. 
+                    scheduler - etermines which Nodes are valid placements for each Pod in the scheduling queue according to constraints and available resources.
+
+
+Docker vs ContainderD- 
+Older block usually have docker, new use word ContainderD
+before Kubernetes ERA Docker use to work with container then came Kubernets to orchestrate docker. Docker & Kubernetes were tightly coupled & k8s use to work with docker only. 
+Then k8s releases CRI (Container runtime interface) which follows OCI (open container Initiative) - imagespec
+                                                                                                    runtimespec
+Since docker was not follwing OCI, it release dockershim. 
+docker already offering CLI, API, BUILD, Volumes, Auth, Security, ContainderD. 
+ContainderD is compatable with CRI, it is a seperate runtime. Since ContainderD was working directly so docker decided to get rid of dockershim after v1.24.
+ContainderD is seperate project by own now. you can just install ContainderD alone without Docker.
+
+ContainderD- 
+CTR/nerdctl - It offer CTR cmd but very limited features. So as the alternate there is other offer like nerdctl, it offer almost all feature of docker and beyond docker. 
+almost all docker cmd work with nerdctl cmd also. 
+
+CRICTL - it belong to k8s community, work with all CRI compatable runtimes. feature is limited, mostly for debugging. it work along with kubelet. used only for specific cmds. 
+docker cmd work same here. it also track pods that docker doesn't. 
+
+
+
+
+
+
+            
+
+
+Some Commands- 
+kubectl run app_name
+kubectl cluster-info
+kubectl get Nodes
