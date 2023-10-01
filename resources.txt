@@ -1,6 +1,9 @@
 Certified Kubernetes Application Developer: https://www.cncf.io/certification/ckad/
 Candidate Handbook: https://www.cncf.io/certification/candidate-handbook/
 Exam Tips: https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad/
+Labs: https://uklabs.kodekloud.com/courses/labs-certified-kubernetes-application-developer
+
+
 
 Keep the code - 20KLOUD handy while registering for the CKA or CKAD exams at Linux Foundation to get a 20% discount.
 
@@ -33,6 +36,8 @@ almost all docker cmd work with nerdctl cmd also.
 
 CRICTL - it belong to k8s community, work with all CRI compatable runtimes. feature is limited, mostly for debugging. it work along with kubelet. used only for specific cmds. 
 docker cmd work same here. it also track pods that docker doesn't. 
+
+
 
 
 
